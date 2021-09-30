@@ -1,0 +1,17 @@
+# https://leetcode.com/problems/two-sum/submissions/
+class Solution:
+    def twoSum(self, nums: List[int], target: int) -> List[int]:
+        count = 0
+        for x in nums:
+            for y in nums:
+                if x+y == target:
+                    print(x,y)
+                    if x == y and nums.count(x) > 1:
+                        rev_nums = nums[::-1]
+                        y = rev_nums.index(y)                        
+                        return [nums.index(x), len(nums)-(y+1)]
+                    elif x == y and nums.count(x) == 1:
+                        count+=1
+                        if count == 1:continue
+                    else:
+                        return [nums.index(x), nums.index(y)]
