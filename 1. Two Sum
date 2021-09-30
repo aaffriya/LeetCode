@@ -5,7 +5,6 @@ class Solution:
         for x in nums:
             for y in nums:
                 if x+y == target:
-                    print(x,y)
                     if x == y and nums.count(x) > 1:
                         rev_nums = nums[::-1]
                         y = rev_nums.index(y)                        
