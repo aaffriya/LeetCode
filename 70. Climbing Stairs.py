@@ -1,7 +1,6 @@
 # https://leetcode.com/problems/climbing-stairs/submissions/
 class Solution:
     def climbStairs(self, n: int) -> int:
-            
             if n<=3: return n
             l = [2,3]
             for i in range(3,n):
