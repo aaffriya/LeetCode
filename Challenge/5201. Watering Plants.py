@@ -12,8 +12,7 @@ class Solution:
                 temp -= plant
             else:
                 step += index + index + 1
-                temp = capacity
-                temp -= plant
+                temp = capacity - plant
                 
         return step
                 
