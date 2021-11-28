@@ -2,19 +2,6 @@
 class Solution:
     def countWords(self, words1: List[str], words2: List[str]) -> int:
         
-        c1 = Counter(words1)
+        c1, c2 = Counter(words1), Counter(words2)
         
-        c2 = Counter(words2)
-        
-        res, s = 0, set()
-        
-        for key, feq in c1.items():
-            if feq == 1:
-                s.add(key)
-                res += 1
-        for key, feq in c2.items():
-            if feq == 1:
-                s.add(key)
-                res += 1
-                
-        return res - len(s)
+        return sum([1 for x in c1.keys() if c1[x] == c2[x] == 1])
