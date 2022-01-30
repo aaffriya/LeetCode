@@ -5,7 +5,7 @@ public:
         
         set<int> s;
         
-        for (const auto &i : nums){
+        for (const int &i : nums){
             s.insert(i);
         }
         while (true){
